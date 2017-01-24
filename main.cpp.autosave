@@ -1,0 +1,20 @@
+#include <iostream>
+#include <boost/graph/adjacency_list.hpp>
+
+class Indiv
+{
+  
+};
+
+boost::adjacency_list<
+  boost::vecS,
+  boost::vecS,
+  boost::directedS,
+  Indiv
+>
+
+int main()
+{
+
+}
+
