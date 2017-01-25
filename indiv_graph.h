@@ -24,5 +24,25 @@ boost::adjacency_list<
 >
 create_my_individual_graph() noexcept;
 
+/*boost::adjacency_list<
+boost::vecS,
+boost::vecS,
+boost::directedS,
+sado::indiv
+>
+
+add_indiv_to_graph(const sado::indiv& i) noexcept;
+*/
+
+using indiv_graph = boost::adjacency_list<
+  boost::vecS,
+  boost::vecS,
+  boost::directedS,
+  sado::indiv
+>;
+
+indiv_graph create_graph_from_population(const std::vector<sado::indiv>& pop) noexcept;
+
+
 
 #endif // INDIV_GRAPH_H

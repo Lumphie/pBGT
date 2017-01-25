@@ -8,6 +8,7 @@ SOURCES += main.cpp \
 
 
 include(sado.pri)
+include(../gausser/gausser.pri)
 
 
 # C++14
