@@ -4,7 +4,9 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    indiv_graph.cpp
+    indiv_graph.cpp \
+    individual_vertex.cpp \
+    int_edge.cpp
 
 
 include(sado.pri)
@@ -24,4 +26,6 @@ LIBS += -lboost_graph
 include(../BoostGraphTutorial/BoostGraphTutorial/boost_graph_tutorial.pri)
 
 HEADERS += \
-    indiv_graph.h
+    indiv_graph.h \
+    individual_vertex.h \
+    int_edge.h

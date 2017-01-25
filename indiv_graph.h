@@ -8,15 +8,16 @@ using indiv_graph = boost::adjacency_list<
   boost::vecS,
   boost::vecS,
   boost::directedS,
-  sado::indiv
+  sado::indiv,
+  int
 >;
+
+using vert_desc = boost::graph_traits<indiv_graph>::vertex_descriptor;
+
+using edg_desc = boost::graph_traits<indiv_graph>::edge_descriptor;
 
 indiv_graph
 create_empty_directed_individual_graph() noexcept;
-
-template <typename graph, typename individual_vertex>
-typename boost::graph_traits<graph>::vertex_descriptor
-add_individual_vertex(const individual_vertex& v, graph& g) noexcept;
 
 indiv_graph
 create_my_individual_graph() noexcept;

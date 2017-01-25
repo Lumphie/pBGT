@@ -1,22 +1,15 @@
 #include "indiv_graph.h"
 #include <boost/graph/adjacency_list.hpp>
+#include "has_edge_between_vertices.h"
 #include "sado_individual.h"
 #include "sado_parameters.h"
+#include "individual_vertex.h"
+#include "int_edge.h"
 
 indiv_graph
 create_empty_directed_individual_graph() noexcept
 {
   return {};
-}
-
-template <typename graph, typename individual_vertex>
-typename boost::graph_traits<graph>::vertex_descriptor
-add_individual_vertex(const individual_vertex& v, graph& g) noexcept
-{
-  static_assert(!std::is_const<graph>::value, "graph cannot be const");
-  const auto vd = boost::add_vertex(g);
-  g[vd] = v;
-  return vd;
 }
 
 indiv_graph
@@ -59,7 +52,7 @@ indiv_graph create_graph_from_population(const std::vector<sado::indiv>& pop) no
     {
       if (pop[pair.first].get_father_id() == pop[j].get_id()
           || pop[pair.first].get_mother_id() == pop[j].get_id())
-        boost::add_edge(v[j].second, pair.second, g);
+       add_int_edge(v[j].second, pair.second, 1, g);
     }
   }
 
