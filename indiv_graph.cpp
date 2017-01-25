@@ -3,12 +3,7 @@
 #include "sado_individual.h"
 #include "sado_parameters.h"
 
-boost::adjacency_list<
-  boost::vecS,
-  boost::vecS,
-  boost::directedS,
-  sado::indiv
->
+indiv_graph
 create_empty_directed_individual_graph() noexcept
 {
   return {};
@@ -24,12 +19,7 @@ add_individual_vertex(const individual_vertex& v, graph& g) noexcept
   return vd;
 }
 
-boost::adjacency_list<
-  boost::vecS,
-  boost::vecS,
-  boost::directedS,
-  sado::indiv
->
+indiv_graph
 create_my_individual_graph() noexcept
 {
   auto g = create_empty_directed_individual_graph();
@@ -47,17 +37,6 @@ create_my_individual_graph() noexcept
   return g;
 
 }
-/*
-boost::adjacency_list<
-boost::vecS,
-boost::vecS,
-boost::directedS,
-sado::indiv
->
-add_indiv_to_graph(const sado::indiv& i) noexcept
-{
-
-}*/
 
 indiv_graph create_graph_from_population(const std::vector<sado::indiv>& pop) noexcept
 {
