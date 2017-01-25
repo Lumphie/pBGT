@@ -6,7 +6,7 @@ Here I will practice with the Boost Graph Tutorial
 
 ### How to:
 
-Use create_graph_from_population(const std::vector<sado::indiv>& pop).
+Use create_graph_from_population(const std::vector\<sado::indiv>& pop).
 Save it to a const auto variable.
 
 save_graph_to_dot(g, "filename.dot")
