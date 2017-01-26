@@ -7,4 +7,6 @@
 
 vert_desc add_individual_vertex(const sado::indiv& v, indiv_graph& g) noexcept;
 
+std::vector<sado::indiv> get_individual_vertexes(const indiv_graph& g) noexcept;
+
 #endif // INDIVIDUAL_VERTEX_H

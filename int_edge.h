@@ -12,4 +12,6 @@ add_int_edge(
     indiv_graph& g
     );
 
+int get_int_edge(const edg_desc& ed, const graph& g) noexcept;
+
 #endif // INT_EDGE_H

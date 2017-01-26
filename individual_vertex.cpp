@@ -9,3 +9,11 @@ vert_desc add_individual_vertex(const sado::indiv& i, indiv_graph& g) noexcept
   g[vd] = i;
   return vd;
 }
+
+std::vector<sado::indiv> get_individual_vertexes(const indiv_graph& g) noexcept
+{
+  using vd = typename graph::vertex_descriptor;
+  std::vector<sado::indiv> v(boost::num_verticees(g));
+  const auto vip = vertices(g);
+  std::transform(vip.first, vip.second, std::begin(v), [g](const vd& d) {return g[d];});
+}

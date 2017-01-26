@@ -21,3 +21,8 @@ add_int_edge(
   g[aer. first] = i;
   return aer.first;
 }
+
+int get_int_edge(const edg_desc& ed, const graph& g) noexcept
+{
+  return g[ed];
+}
